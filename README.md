@@ -4,6 +4,7 @@ Linux networks configuration on virtual machines.
 
 The russian version of the task can be found in the repository.
 
+
 ## Contents
 
 1. [Chapter I](#chapter-i)
@@ -21,6 +22,7 @@ The russian version of the task can be found in the repository.
    3.7. [NAT](#part-7-nat) \
    3.8. [Bonus. Introduction to SSH Tunnels](#part-8-bonus-introduction-to-ssh-tunnels)
 4. [Chapter IV](#chapter-iv)
+
 
 ## Chapter I
 
@@ -50,6 +52,7 @@ Planet Earth, USA, California, Compton, Seb's Jazz Club, nowadays.
 
 
 ## Chapter II
+
 ### TCP IP protocol stack
 
 What exactly is a network? A network is a connection of at least 2 computers by some kind of communication links or in a more complicated cases, by some networking hardware. The data is exchanged between them according to certain rules, and these rules are "dictated" by the **TCP/IP** protocol stack.
@@ -66,7 +69,7 @@ The **OSI** model consists of seven different layers. Each layer is responsible 
 In a network based on the **TCP/IP** protocol stack, each host (computer or device connected to the network) has an IP address. IP address is 32-bit number. It is usually represented in dot-decimal notation, consisting of four decimal numbers, each ranging from 0 to 255, separated by dots, e.g., *192.168.0.1*.
 In general, an IP address is divided into two parts: the network (subnet) address and the host address:
 
-<img src="misc/images/subnetwork_mask.png" alt="subnetwork_mask"/>
+![subnetwork_mask](misc/images/subnetwork_mask.png)
 
 As you can see in the picture, there are such things as network and subnet.
 I think it's clear from the meaning of those words that IP addresses are divided into networks, and networks are divided into subnets using a subnet mask
@@ -86,7 +89,7 @@ It must be mentioned that the IP protocol has no notion of ports, **TCP** and **
 
 ### Routing
 
-<img src="misc/images/network_route.png" alt="network_route" width="500"/>
+![network_route](misc/images/network_route.png)
 
 You may ask, how does one computer connect to another one? How does it know where to send packets?
 
@@ -123,6 +126,7 @@ Meanings of the columns:
 
 \> *As last time, you save even more useful information in the materials folder*
 
+
 ## Chapter III
 
 As a result of the work you should provide a report with completed tasks. Each part of the task describe what should be added to the report once it has been completed. This can be answers to questions, screenshots, etc.
@@ -144,9 +148,9 @@ As a result of the work you should provide a report with completed tasks. Each p
 
 #### 1.1. Networks and Masks
 ##### Define and write in the report:
-##### 1) Network address of *192.167.38.54/13*
-##### 2) Conversion of the mask *255.255.255.0* to prefix and binary, */15* to normal and binary, *11111111.11111111.11111111.11110000* to normal and prefix
-##### 3) Minimum and maximum host in *12.167.38.4* network with masks: */8*, *11111111.11111111.00000000.00000000*, *255.255.254.0* and */4*
+##### 1) network address of *192.167.38.54/13*
+##### 2) conversion of the mask *255.255.255.0* to prefix and binary, */15* to normal and binary, *11111111.11111111.11111111.11110000* to normal and prefix
+##### 3) minimum and maximum host in *12.167.38.4* network with masks: */8*, *11111111.11111111.00000000.00000000*, *255.255.254.0* and */4*
 
 #### 1.2. localhost
 ##### Define and write in the report whether an application running on localhost can be accessed with the following IPs: *194.34.23.100*, *127.0.0.2*, *127.1.0.1*, *128.0.0.1*
@@ -248,7 +252,7 @@ iptables –X
 **== Task ==**
 
 Network: \
-<img src="misc/images/part5_network.png" alt="part5_network" width="500"/>
+![part5_network](misc/images/part5_network.png)
 
 ##### Start five virtual machines (3 workstations (ws11, ws21, ws22) and 2 routers (r1, r2))
 
@@ -350,7 +354,7 @@ subnet 10.20.0.0 netmask 255.255.255.192
     option domain-name-servers 10.20.0.1;
 }
 ```
-##### 2) Write `nameserver 8.8.8.8.` in a *resolv.conf* file
+##### 2) write `nameserver 8.8.8.8.` in a *resolv.conf* file
 - Add screenshots of the changed files to the report.
 ##### Restart the **DHCP** service with `systemctl restart isc-dhcp-server`. Reboot the ws21 machine with `reboot` and show with `ip a` that it has got an address. Also ping ws22 from ws21.
 - Add a screenshot with the call and the output of the used commands to the report.
@@ -381,23 +385,23 @@ And finally, the cherry on the cake, let me tell you about network address trans
 - Add screenshots with the call and the output of the used command to the report.
 
 ##### Add the following rules to the firewall, created similarly to the firewall from Part 4, on r2:
-##### 1) Delete rules in the filter table - `iptables -F`
-##### 2) Delete rules in the "NAT" table - `iptables -F -t nat`
-##### 3) Drop all routed packets - `iptables --policy FORWARD DROP`
+##### 1) delete rules in the filter table - `iptables -F`
+##### 2) delete rules in the "NAT" table - `iptables -F -t nat`
+##### 3) drop all routed packets - `iptables --policy FORWARD DROP`
 ##### Run the file as in Part 4
 ##### Check the connection between ws22 and r1 with the `ping` command
 *When running the file with these rules, ws22 should not ping from r1*
 - Add screenshots with the call and the output of the used command to the report.
 ##### Add another rule to the file:
-##### 4) Allow routing of all **ICMP** protocol packets
+##### 4) allow routing of all **ICMP** protocol packets
 ##### Run the file as in Part 4
 ##### Check connection between ws22 and r1 with the `ping` command
 *When running the file with these rules, ws22 should ping from r1*
 - Add screenshots with the call and the output of the used command to the report.
 ##### Add two more rules to the file:
-##### 5) Enable **SNAT**, which is masquerade all local ip from the local network behind r2 (as defined in Part 5 - network 10.20.0.0)
+##### 5) enable **SNAT**, which is masquerade all local ip from the local network behind r2 (as defined in Part 5 - network 10.20.0.0)
 *Tip: it is worth thinking about routing internal packets as well as external packets with an established connection*
-##### 6) Enable **DNAT** on port 8080 of r2 machine and add external network access to the Apache web server running on ws22
+##### 6) enable **DNAT** on port 8080 of r2 machine and add external network access to the Apache web server running on ws22
 *Tip: be aware that when you will try to connect, there will be a new tcp connection for ws22 and port 80
 - Add a screenshot of the changed file to the report
 ##### Run the file as in Part 4
