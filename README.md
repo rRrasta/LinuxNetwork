@@ -223,7 +223,7 @@ As a result of the work you should provide a report with completed tasks. Each p
 
 # Deleting all the rules in the "filter" table (default).
 iptables -F
-iptables –X
+iptables -X
 ```
 ##### The following rules should be added to the file in a row:
 ##### 1) on ws1 apply a strategy where a deny rule is written at the beginning and an allow rule is written at the end (this applies to points 4 and 5)
