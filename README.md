@@ -455,4 +455,4 @@ And finally, the cherry on the cake, let me tell you about network address trans
 
 \> *You talk about other things for a while, listening to some nice music and finishing your drinks, and then you say goodbye...*.
 
-💡 [Tap here](https://forms.yandex.ru/cloud/6418183eeb614624a5cee6b5/) **to leave your feedback on the project**. Pedago Team really tries to make your educational experience better.
+💡 [Tap here](https://forms.yandex.ru/cloud/6418183eeb614624a5cee6b5/) **to leave your feedback on the project**. Product Team really tries to make your educational experience better.
