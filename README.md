@@ -285,7 +285,7 @@ default via 10.10.0.1 dev eth0
 - Add a screenshot of the *etc/netplan/00-installer-config.yaml* file to the report.
 ##### Call `ip r` and show that a route is added to the routing table
 - Add a screenshot with the call and output of the used command to the report.
-##### Ping r2 router from ws11 and show on r2 that the ping is reaching. To do this, use the `tcpdump -tn -i eth1`
+##### Ping r2 router from ws11 and show on r2 that the ping is reaching. To do this, use the `tcpdump -tn -i eth0`
 command.
 - Add screenshots with the call and output of the used commands to the report.
 
@@ -354,7 +354,7 @@ subnet 10.20.0.0 netmask 255.255.255.192
     option domain-name-servers 10.20.0.1;
 }
 ```
-##### 2) write `nameserver 8.8.8.8.` in a *resolv.conf* file
+##### 2) write `nameserver 8.8.8.8` in a *resolv.conf* file
 - Add screenshots of the changed files to the report.
 ##### Restart the **DHCP** service with `systemctl restart isc-dhcp-server`. Reboot the ws21 machine with `reboot` and show with `ip a` that it has got an address. Also ping ws22 from ws21.
 - Add a screenshot with the call and the output of the used commands to the report.
