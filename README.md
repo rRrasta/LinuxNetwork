@@ -28,27 +28,27 @@ The russian version of the task can be found in the repository.
 
 ![linux_network](misc/images/linux_network.png)
 
-Planet Earth, USA, California, Compton, Seb's Jazz Club, nowadays.
+Planet Earth, Seb's Jazz Club, nowadays.
 
-\> *There's a new jazz band playing at the bar. Their jazz is a little more energetic than you're used to, although they're certainly talented.*
+\> *There's a new jazz band playing in the bar. Their jazz is a little more energetic than you're used to, although they're certainly talented.*
 
-`—` Sebastian, you have been sitting behind a desk in the office for a week now. Do you think you've learned how to use Linux? But given that you called me again in the middle of the week, I think I already know the answer...
+`—` Sebastian, you have been sitting behind a desk in the office for a week now. Do you think you've learned how to use Linux? But since you called me back in the middle of the week, I think I already know the answer...
 
-`—` I'm slowly getting the hang of it, but obviously not as quickly as I'd like.
+`—` I'm slowly getting the hang of it, but obviously not as fast as I'd like.
 
 `—` Are you ready to go to work tomorrow?
 
-`—` I don't get it, I just don't get it, man. They tell me to work on configuration of networks. But to me it's just words. I want to meet my young self when I was a stupid kid who took the job as a sysadmin, talk him out of it, explain what's what, but I can't. What should I do, buddy?
+`—` I don't get it, I just don't get it, man. They tell me to work on network configuration. But it's just words to me. I want to meet my young self when I was a stupid kid who took the sysadmin job, talk him out of it, explain what's what, but I can't. What should I do, buddy?
 
-`—` Well, come on, you shouldn't despair. Configuring networks isn't so bad. I'd be happy to tell you about it if you answer one question: why did your father get you the job as a sysadmin anyway? I mean, this is his bar, why not here? That would be an easier job.
+`—` Well, come on, don't despair. Configuring networks isn't that bad. I'd be happy to tell you about it if you'd answer one question: why did your dad give you the sysadmin job in the first place? I mean, this is his bar, why not here? It would be an easier job.
 
-`—` Who knows what's on the old man's mind. He says something about being independent and broadening your mind...
+`—` Who knows what's on the old man's mind. He says something about being independent and expanding your mind...
 
-`—` Well, then, let's keep broadening your mind. Get your laptop out, start the virtual machine, I'll show you what's what.
+`—` Well, let's expand your minds. Take out your laptop, boot up the virtual machine, I'll show you what's what.
 
-\> *The regular band replace the new one, the music slows down and the waiter still hasn’t brought your order.*
+\> *The regular band replaces the new one, the music slows down and the waiter still hasn’t brought your order.*
 
-\> *While Sebastian is hesitatingly start the virtual machine, you decide to share some basic information about networks in Linux.*
+\> *While Sebastian hesitates to start the virtual machine, you decide to share some basic information about networking in Linux.*
 
 
 ## Chapter II
@@ -343,7 +343,7 @@ Here is an example of the **traceroute** utility output after adding a gateway:
 
 ##### For r2, configure the **DHCP** service in the */etc/dhcp/dhcpd.conf* file:
 
-##### 1) specify the default router address, DNS-server and internal network address. Here is an example of a file for r2:
+##### 1) Specify the default router address, DNS-server and internal network address. Here is an example of a file for r2:
 ```shell
 subnet 10.100.0.0 netmask 255.255.0.0 {}
 
@@ -354,7 +354,7 @@ subnet 10.20.0.0 netmask 255.255.255.192
     option domain-name-servers 10.20.0.1;
 }
 ```
-##### 2) write `nameserver 8.8.8.8` in a *resolv.conf* file
+##### 2) Write `nameserver 8.8.8.8` in a *resolv.conf* file
 - Add screenshots of the changed files to the report.
 ##### Restart the **DHCP** service with `systemctl restart isc-dhcp-server`. Reboot the ws21 machine with `reboot` and show with `ip a` that it has got an address. Also ping ws22 from ws21.
 - Add a screenshot with the call and the output of the used commands to the report.
