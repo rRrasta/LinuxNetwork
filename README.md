@@ -32,19 +32,19 @@ Planet Earth, Seb's Jazz Club, nowadays.
 
 \> *There's a new jazz band playing in the bar. Their jazz is a little more energetic than you're used to, although they're certainly talented.*
 
-`—` Sebastian, you have been sitting behind a desk in the office for a week now. Do you think you've learned how to use Linux? But since you called me back in the middle of the week, I think I already know the answer...
+"Sebastian, you have been sitting behind a desk in the office for a week now. Do you think you've learned how to use Linux? But since you called me back in the middle of the week, I think I already know the answer..."
 
-`—` I'm slowly getting the hang of it, but obviously not as fast as I'd like.
+"I'm slowly getting the hang of it, but obviously not as fast as I'd like."
 
-`—` Are you ready to go to work tomorrow?
+"Are you ready to go to work tomorrow?"
 
-`—` I don't get it, I just don't get it, man. They tell me to work on network configuration. But it's just words to me. I want to meet my young self when I was a stupid kid who took the sysadmin job, talk him out of it, explain what's what, but I can't. What should I do, buddy?
+"I don't get it, I just don't get it, man. They tell me to work on network configuration. But it's just words to me. I want to meet my young self when I was a stupid kid who took the sysadmin job, talk him out of it, explain what's what, but I can't. What should I do, buddy?"
 
-`—` Well, come on, don't despair. Configuring networks isn't that bad. I'd be happy to tell you about it if you'd answer one question: why did your dad give you the sysadmin job in the first place? I mean, this is his bar, why not here? It would be an easier job.
+"Well, come on, don't despair. Configuring networks isn't that bad. I'd be happy to tell you about it if you'd answer one question: why did your dad give you the sysadmin job in the first place? I mean, this is his bar, why not here? It would be an easier job."
 
-`—` Who knows what's on the old man's mind. He says something about being independent and expanding your mind...
+"Who knows what's on the old man's mind. He says something about being independent and expanding your mind..."
 
-`—` Well, let's expand your minds. Take out your laptop, boot up the virtual machine, I'll show you what's what.
+"Well, let's expand your minds. Take out your laptop, boot up the virtual machine, I'll show you what's what."
 
 \> *The regular band replaces the new one, the music slows down and the waiter still hasn’t brought your order.*
 
@@ -116,31 +116,31 @@ default          128.17.75.98   0.0.0.0         UGN       1500 0          0 eth0
 ```
 
 Meanings of the columns:
-- Destination - addresses of destination networks (hosts). If a network is specified, the address usually ends with a zero.
-- Gateway - the gateway address for the host/network specified in the first column. The third column is the subnet mask for which this route works.
-- Flags - information about destination address (U - route works, N - route for network, H - route for host, etc.)
-- MSS - number of bytes that can be sent at one time
-- Window - number of frames that can be sent before confirmation is received
-- irtt - route usage statistics
-- Iface - specifies the network interface used for the route (eth0, eth1, etc.)
+- Destination - addresses of destination networks (hosts). If a network is specified, the address usually ends with a zero;
+- Gateway - the gateway address for the host/network specified in the first column; The third column is the subnet mask for which this route works;
+- Flags - information about destination address (U - route works, N - route for network, H - route for host, etc.);
+- MSS - number of bytes that can be sent at one time;
+- Window - number of frames that can be sent before confirmation is received;
+- irtt - route usage statistics;
+- Iface - specifies the network interface used for the route (eth0, eth1, etc.).
 
-\> *As last time, you save even more useful information in the materials folder*
+\> *As last time, you save even more useful information in the materials folder.*
 
 
 ## Chapter III
 
 As a result of the work you should provide a report with completed tasks. Each part of the task describe what should be added to the report once it has been completed. This can be answers to questions, screenshots, etc.
-- A report with a .md extension must be uploaded to the repository, in the src folder.
-- All parts of the task should be highlighted in the report as level 2 headings.
-- Within one part of the task, everything that is added to the report must be in the form of the list.
-- Each screenshot in the report must be briefly captioned (what’s in the screenshot).
-- All screenshots must be cropped so that only the relevant part of the screen is shown.
-- It’s allowed to have several task points shown in one screenshot, but they must all be described in the caption.
+- A report with a .md extension must be uploaded to the repository, in the src folder;
+- All parts of the task should be highlighted in the report as level 2 headings;
+- Within one part of the task, everything that is added to the report must be in the form of the list;
+- Each screenshot in the report must be briefly captioned (what’s in the screenshot);
+- All screenshots must be cropped so that only the relevant part of the screen is shown;
+- It’s allowed to have several task points shown in one screenshot, but they must all be described in the caption;
 - Install **Ubuntu 20.04 Server LTS** on all virtual machines created during the task.
 
 ## Part 1. **ipcalc** tool
 
-`-` So, let's start our dive into the wonderful world of networks by getting to know IP addresses. And for that we will use **ipcalc** tool.
+"So, let's start our dive into the wonderful world of networks by getting to know IP addresses. And for that we will use **ipcalc** tool."
 
 **== Task ==**
 
@@ -162,7 +162,7 @@ As a result of the work you should provide a report with completed tasks. Each p
 
 ## Part 2. Static routing between two machines
 
-`-` Now let's figure out how to connect two machines using static routing.
+"Now let's figure out how to connect two machines using static routing."
 
 **== Task ==**
 
@@ -191,11 +191,11 @@ As a result of the work you should provide a report with completed tasks. Each p
 
 ## Part 3. **iperf3** utility
 
-`-` Now that we have linked two machines, tell me: What is the most important thing about transferring information between machines?
+"Now that we have linked two machines, tell me: what is the most important thing about transferring information between machines?"
 
-`-` The connection speed?
+"The connection speed?"
 
-`-` That's right. We’ll check it with **iperf3** utility.
+"That's right. We’ll check it with **iperf3** utility."
 
 **== Task ==**
 
@@ -210,7 +210,7 @@ As a result of the work you should provide a report with completed tasks. Each p
 
 ## Part 4. Network firewall
 
-`-` After connecting the machines, the next our task is to control the information flowing over the connection. For that we use firewalls.
+"After connecting the machines, the next our task is to control the information flowing over the connection. For that we use firewalls."
 
 **== Task ==**
 
@@ -226,14 +226,14 @@ iptables -F
 iptables -X
 ```
 ##### The following rules should be added to the file in a row:
-##### 1) on ws1 apply a strategy where a deny rule is written at the beginning and an allow rule is written at the end (this applies to points 4 and 5)
-##### 2) on ws2 apply a strategy where an allow rule is written at the beginning and a deny rule is written at the end (this applies to points 4 and 5)
-##### 3) open access on machines for port 22 (ssh) and port 80 (http)
-##### 4) reject *echo reply* (machine must not ping, i.e. there must be a lock on OUTPUT)
-##### 5) allow *echo reply* (machine must be pinged)
+##### 1) on ws1 apply a strategy where a deny rule is written at the beginning and an allow rule is written at the end (this applies to points 4 and 5);
+##### 2) on ws2 apply a strategy where an allow rule is written at the beginning and a deny rule is written at the end (this applies to points 4 and 5);
+##### 3) open access on machines for port 22 (ssh) and port 80 (http);
+##### 4) reject *echo reply* (machine must not ping, i.e. there must be a lock on OUTPUT);
+##### 5) allow *echo reply* (machine must be pinged);
 - Add screenshots of the */etc/firewall* file for each machine to the report.
 ##### Run the files on both machines with `chmod +x /etc/firewall.sh` and `/etc/firewall.sh` commands.
-- Add screenshots of both files running to the report.
+- Add screenshots of both files running to the report;
 - Describe in the report the difference between the strategies used in the first and second files.
 
 #### 4.2. **nmap** utility
@@ -242,12 +242,12 @@ iptables -X
 - Add screenshots with the call and output of the **ping** and **nmap** commands to the report.
 
 ##### Save dumps of the virtual machine images
-**p.s. Do not upload dumps to git under any circumstances!**
+**P.S. Do not upload dumps to git under any circumstances!**
 
 
 ## Part 5. Static network routing
 
-`-` So far we have only connected two machines, but now it's time for static routing of the whole network.
+"So far we have only connected two machines, but now it's time for static routing of the whole network."
 
 **== Task ==**
 
@@ -319,7 +319,7 @@ Here is an example of the **traceroute** utility output after adding a gateway:
 ```
 ##### Run the `tcpdump -tnv -i eth0` dump command on r1
 ##### Use **traceroute** utility to list routers in the path from ws11 to ws21
-- Add a screenshots with the call and the output of the used commands (tcpdump and traceroute) to the report.
+- Add a screenshots with the call and the output of the used commands (tcpdump and traceroute) to the report;
 - Based on the output of the dump on r1, explain in the report how path construction works using **traceroute**.
 
 #### 5.6. Using **ICMP** protocol in routing
@@ -331,15 +331,15 @@ Here is an example of the **traceroute** utility output after adding a gateway:
 - Add a screenshot with the call and the output of the used commands to the report.
 
 ##### Save dumps of the virtual machine images
-**p.s. Do not upload dumps to git under any circumstances!**
+**P.S. Do not upload dumps to git under any circumstances!**
 
 ## Part 6. Dynamic IP configuration using **DHCP**
 
-`-` Our next step is to learn more about **DHCP** service, which you already know.
+"Our next step is to learn more about **DHCP** service, which you already know."
 
 **== Task ==**
 
-*In this task you need to use virtual machines from Part 5*
+*In this task you need to use virtual machines from Part 5.*
 
 ##### For r2, configure the **DHCP** service in the */etc/dhcp/dhcpd.conf* file:
 
@@ -365,15 +365,15 @@ subnet 10.20.0.0 netmask 255.255.255.192
 ##### Сonfigure r1 the same way as r2, but make the assignment of addresses strictly linked to the MAC-address (ws11). Run the same tests
 - Describe this part in the report the same way as for r2.
 ##### Request ip address update from ws21
-- Add screenshots of ip before and after update to the report
+- Add screenshots of ip before and after update to the report;
 - Describe in the report what **DHCP** server options were used in this point.
 
 ##### Save dumps of virtual machine images
-**p.s. Do not upload dumps to git under any circumstances!**
+**P.S. Do not upload dumps to git under any circumstances!**
 
 ## Part 7. **NAT**
 
-And finally, the cherry on the cake, let me tell you about network address translation mechanism.
+"And finally, the cherry on the cake, let me tell you about network address translation mechanism."
 
 **== Task ==**
 
@@ -411,23 +411,23 @@ And finally, the cherry on the cake, let me tell you about network address trans
 - Add screenshots with the call and the output of the used commands to the report.
 
 ##### Save dumps of virtual machine images
-**p.s. Do not upload dumps to git under any circumstances!**
+**P.S. Do not upload dumps to git under any circumstances!**
 
 ## Part 8. Bonus. Introduction to **SSH Tunnels**
 
-`-` Well, that'll be all for now. Do you have any other questions?
+"Well, that'll be all for now. Do you have any other questions?"
 
-`-` Yes, I wanted to ask about one more thing. When I was at work, I overheard that there are some kind of training projects in my company. I don't know the details, but I'd really like to take a look... It might be useful.
+"Yes, I wanted to ask about one more thing. When I was at work, I overheard that there are some kind of training projects in my company. I don't know the details, but I'd really like to take a look... It might be useful."
 
-`-` Yes, it's really interesting, but how can I help you with that?
+"Yes, it's really interesting, but how can I help you with that?"
 
-`-` The problem is that you need to have an access to a closed network to get to these projects. Can you give me any advice on that?
+"The problem is that you need to have an access to a closed network to get to these projects. Can you give me any advice on that?"
 
-`-` Wow, that’s really something… I'm not sure how much help this will be, but I can tell you about **SSH Tunnels**.
+"Wow, that’s really something… I'm not sure how much help this will be, but I can tell you about **SSH Tunnels**."
 
 **== Task ==**
 
-*In this task you need to use virtual machines from Part 5*
+*In this task you need to use virtual machines from Part 5.*
 
 ##### Run a firewall on r2 with the rules from Part 7
 ##### Start the **Apapche** web server on ws22 on localhost only (i.e. in */etc/apache2/ports.conf* file change the line `Listen 80` to `Listen localhost:80`)
@@ -437,21 +437,21 @@ And finally, the cherry on the cake, let me tell you about network address trans
 - In the report, describe the commands that you need for doing these 4 steps and add screenshots of their call and output.
 
 ##### Save dumps of virtual machine images
-**p.s. Do not upload dumps to git under any circumstances!**
+**P.S. Do not upload dumps to git under any circumstances!**
 
 ## Chapter IV
 
-`-` Thank you so much for the help!
+"Thank you so much for the help!"
 
-`-` You’re welcome! It was good for me to remember the basics of administration too. By the way, I’ve decided to go into DevOps.
+"You’re welcome! It was good for me to remember the basics of administration too. By the way, I’ve decided to go into DevOps."
 
-`-` Wow! Have you found a job yet?
+"Wow! Have you already found a job?"
 
-`-` Yes, but I’ll have to move. So, next time you'll have to learn everything on your own.
+"Yes, but I’ll have to move. So, next time you'll have to learn everything on your own."
 
-`-` Sooner or later I'd have to start anyway, so maybe it's for the best. Stay in touch to tell me about how you’re getting on!
+"Sooner or later I'd have to start anyway, so maybe it's for the best. Stay in touch to tell me about how you’re getting on!"
 
-`-` You too!
+"You too!"
 
 \> *You talk about other things for a while, listening to some nice music and finishing your drinks, and then you say goodbye...*.
 
